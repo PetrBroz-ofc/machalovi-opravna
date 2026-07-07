@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560" fill="none">
+  <!-- arch backdrop -->
+  <path d="M96 560V256C96 132.3 196.3 32 320 32s224 100.3 224 224v304H96Z" fill="#f0e6d2"/>
+  <path d="M120 560V260c0-110.5 89.5-200 200-200s200 89.5 200 200v300H120Z" fill="none" stroke="#c9973f" stroke-width="2" stroke-dasharray="1 10" stroke-linecap="round"/>
+
+  <!-- hanging keys -->
+  <g stroke="#8a6a3f" stroke-width="2">
+    <line x1="205" y1="60" x2="205" y2="150"/>
+    <line x1="435" y1="60" x2="435" y2="128"/>
+  </g>
+  <g transform="translate(205 168)">
+    <circle r="18" fill="none" stroke="#c9973f" stroke-width="8"/>
+    <rect x="-4" y="12" width="8" height="44" rx="3" fill="#c9973f"/>
+    <rect x="-4" y="38" width="16" height="8" rx="3" fill="#c9973f"/>
+    <rect x="-4" y="50" width="13" height="8" rx="3" fill="#c9973f"/>
+  </g>
+  <g transform="translate(435 146)">
+    <circle r="15" fill="none" stroke="#a05c2c" stroke-width="7"/>
+    <rect x="-3.5" y="10" width="7" height="38" rx="3" fill="#a05c2c"/>
+    <rect x="-3.5" y="32" width="14" height="7" rx="3" fill="#a05c2c"/>
+    <rect x="-3.5" y="42" width="11" height="7" rx="3" fill="#a05c2c"/>
+  </g>
+
+  <!-- boot -->
+  <g>
+    <path d="M236 220c0-8 6-14 14-14h84c8 0 14 6 14 14v118c0 6 4 12 10 15l74 34c14 7 23 21 23 37v6c0 10-8 18-18 18H250c-8 0-14-6-14-14V220Z" fill="#a05c2c"/>
+    <path d="M236 404h219v16c0 10-8 18-18 18H250c-8 0-14-6-14-14v-20Z" fill="#3a2a1c"/>
+    <path d="M236 424h219v6c0 10-8 18-18 18H250c-8 0-14-6-14-14v-10Z" fill="#241a12"/>
+    <!-- laces -->
+    <g stroke="#f7f1e6" stroke-width="7" stroke-linecap="round">
+      <line x1="262" y1="238" x2="322" y2="258"/>
+      <line x1="322" y1="238" x2="262" y2="258"/>
+      <line x1="262" y1="278" x2="322" y2="298"/>
+      <line x1="322" y1="278" x2="262" y2="298"/>
+      <line x1="262" y1="318" x2="322" y2="338"/>
+      <line x1="322" y1="318" x2="262" y2="338"/>
+    </g>
+    <!-- stitching -->
+    <path d="M244 396h204" stroke="#e8d09a" stroke-width="3" stroke-dasharray="8 7" stroke-linecap="round"/>
+    <path d="M348 214v122" stroke="#7c4520" stroke-width="3" stroke-dasharray="8 7" stroke-linecap="round"/>
+  </g>
+
+  <!-- needle & thread -->
+  <path d="M120 470c60-36 128-10 116 34" stroke="#c9973f" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 9"/>
+  <circle cx="120" cy="470" r="14" fill="#c9973f"/>
+  <circle cx="120" cy="470" r="6" fill="#f0e6d2"/>
+
+  <!-- hammer -->
+  <g transform="translate(508 468) rotate(28)">
+    <rect x="-6" y="-8" width="12" height="86" rx="5" fill="#8a6a3f"/>
+    <rect x="-30" y="-30" width="60" height="26" rx="8" fill="#3a2a1c"/>
+  </g>
+
+  <!-- ground -->
+  <rect x="64" y="520" width="512" height="10" rx="5" fill="#241a12" opacity="0.85"/>
+</svg>

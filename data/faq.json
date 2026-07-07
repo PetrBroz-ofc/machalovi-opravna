@@ -1,0 +1,30 @@
+{
+  "eyebrow": "Časté dotazy",
+  "title": "Na co se nás často ptáte",
+  "items": [
+    {
+      "q": "Jak dlouho trvá oprava obuvi?",
+      "a": "Běžné opravy jako výměna patníků zvládneme obvykle do 2–3 pracovních dnů. U složitějších oprav se na termínu domluvíme předem – a když spěcháte, pokusíme se vyjít vstříc."
+    },
+    {
+      "q": "Vyrobíte klíč opravdu na počkání?",
+      "a": "Ano, kopie běžných klíčů (cylindrické, dozické) vyrábíme na počkání během několika minut. U speciálních bezpečnostních profilů záleží na dostupnosti polotovaru – informujte se prosím osobně nebo telefonicky."
+    },
+    {
+      "q": "Kolik bude oprava stát?",
+      "a": "Orientační ceny najdete v našem ceníku. Přesnou cenu vám řekneme hned při přijetí zakázky, jakmile věc uvidíme – a bez vašeho souhlasu nikdy neuděláme nic navíc."
+    },
+    {
+      "q": "Můžu u vás platit kartou?",
+      "a": "Ano, přijímáme platby kartou i hotově."
+    },
+    {
+      "q": "Poskytujete na opravy záruku?",
+      "a": "Samozřejmě. Na provedené opravy poskytujeme záruku dle zákona. Pokud by se s opravou cokoli dělo, přineste ji zpět a dáme to do pořádku."
+    },
+    {
+      "q": "Vyplatí se oprava, nebo je lepší koupit nové?",
+      "a": "To vám poctivě řekneme na rovinu. Pokud by oprava stála víc, než je věc hodná, doporučíme vám ji neopravovat. Kvalitní kožené boty či kabelky se ale téměř vždy vyplatí zachránit."
+    }
+  ]
+}

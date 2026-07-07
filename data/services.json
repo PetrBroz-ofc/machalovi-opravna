@@ -1,0 +1,58 @@
+[
+  {
+    "icon": "👞",
+    "title": "Oprava obuvi",
+    "short": "Podpatky, podrážky, šití, lepení i výměna zipů – vrátíme botám pohodlí a pěkný vzhled.",
+    "description": "Opravujeme dámskou, pánskou i dětskou obuv včetně kožených a vycházkových bot. Vyměníme podpatky a patníky, podlepíme či kompletně vyměníme podrážku, prošijeme uvolněné švy a vyměníme rozbité zipy. Poradíme si i s roztažením těsné obuvi nebo výměnou stélek.",
+    "features": [
+      "Výměna podpatků a patníků",
+      "Podlepení a výměna podrážek",
+      "Šití a lepení svršků",
+      "Výměna zipů a suchých zipů",
+      "Roztažení obuvi a výměna stélek"
+    ],
+    "image": ""
+  },
+  {
+    "icon": "🔑",
+    "title": "Výroba klíčů",
+    "short": "Kopie běžných i bezpečnostních klíčů na počkání, na moderních strojích a s garancí funkčnosti.",
+    "description": "Na počkání vyrobíme kopie klíčů dozických, cylindrických i bezpečnostních profilů. Klíče frézujeme na přesných strojích, takže fungují napoprvé – a pokud by výjimečně nepasovaly, upravíme je nebo vyrobíme znovu zdarma. Nabízíme také klíče ke schránkám, visacím zámkům a vložky zámků.",
+    "features": [
+      "Klíče dozické a cylindrické",
+      "Bezpečnostní a profilové klíče",
+      "Klíče k poštovním schránkám",
+      "Prodej vložek a visacích zámků",
+      "Garance funkčnosti kopie"
+    ],
+    "image": ""
+  },
+  {
+    "icon": "🧳",
+    "title": "Oprava tašek a kufrů",
+    "short": "Zipy, kolečka, madla i švy – zavazadlo od nás odejde připravené na další cesty.",
+    "description": "Opravujeme cestovní kufry, batohy, sportovní i školní tašky. Nejčastěji měníme rozbité zipy a jezdce, opotřebená kolečka, utržená madla a popruhy. Prošijeme povolené švy a doplníme chybějící přezky či karabiny, aby vám zavazadlo sloužilo dál.",
+    "features": [
+      "Výměna zipů a jezdců",
+      "Výměna koleček u kufrů",
+      "Oprava madel a popruhů",
+      "Prošití švů a výměna přezek",
+      "Opravy batohů a školních tašek"
+    ],
+    "image": ""
+  },
+  {
+    "icon": "👜",
+    "title": "Opravy kožené galanterie",
+    "short": "Kabelky, peněženky, opasky i kožené oděvy ošetříme, opravíme a vrátíme jim šmrnc.",
+    "description": "Kůže je materiál, který při správné péči vydrží desítky let. Opravíme vaši kabelku, peněženku či opasek, vyměníme podšívku a zipy, zkrátíme opasek na míru a poradíme s ošetřením a barvením kůže. Šetrně opravíme i kožené bundy a další oděvy.",
+    "features": [
+      "Opravy kabelek a peněženek",
+      "Zkracování a výroba dírek u opasků",
+      "Výměna podšívek a zipů",
+      "Drobné opravy kožených oděvů",
+      "Poradenství s péčí o kůži"
+    ],
+    "image": ""
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "eyebrow": "Proč právě k nám",
+  "title": "Řemeslo, na které je spolehnutí",
+  "subtitle": "Nejsme anonymní provozovna v obchodním centru. Jsme rodina, která své práci rozumí a stojí si za ní.",
+  "items": [
+    {
+      "icon": "🏠",
+      "title": "Rodinná tradice",
+      "text": "Dílnu vedeme jako rodina už desítky let. Každou zakázku bereme osobně a záleží nám na tom, abyste se k nám rádi vraceli."
+    },
+    {
+      "icon": "✂️",
+      "title": "Poctivá práce",
+      "text": "Používáme kvalitní materiály a osvědčené postupy. Když si myslíme, že se oprava nevyplatí, řekneme vám to na rovinu."
+    },
+    {
+      "icon": "⏱️",
+      "title": "Rychlé termíny",
+      "text": "Klíče vyrábíme na počkání a většinu oprav zvládneme do několika dní. Na termínu se vždy domluvíme předem."
+    },
+    {
+      "icon": "💰",
+      "title": "Férové ceny",
+      "text": "Cenu se dozvíte dřív, než se do práce pustíme. Žádné skryté poplatky, žádná překvapení při vyzvednutí."
+    }
+  ]
+}

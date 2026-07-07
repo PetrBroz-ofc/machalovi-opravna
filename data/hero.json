@@ -1,0 +1,15 @@
+{
+  "eyebrow": "Rodinná opravna a klíčová služba",
+  "title": "Poctivé řemeslo, které vrací věcem život",
+  "subtitle": "Opravna obuvi a výroba klíčů Machalovi",
+  "description": "Opravíme vaše boty, tašky, kufry i koženou galanterii a na počkání vyrobíme klíče. Rychle, kvalitně a za férové ceny – tak, jak se na rodinnou firmu sluší.",
+  "btn1": { "text": "Naše služby", "link": "#sluzby" },
+  "btn2": { "text": "Zobrazit ceník", "link": "#cenik" },
+  "badges": [
+    { "icon": "🛠️", "text": "30+ let zkušeností" },
+    { "icon": "🔑", "text": "Klíče na počkání" },
+    { "icon": "🤝", "text": "Férové jednání" }
+  ],
+  "bgImage": "",
+  "heroImage": "assets/hero.svg"
+}

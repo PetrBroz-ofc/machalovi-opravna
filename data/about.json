@@ -1,0 +1,11 @@
+{
+  "eyebrow": "O nás",
+  "title": "Rodinná dílna, kde řemeslo dědíme z generace na generaci",
+  "text": "Naše opravna je rodinný podnik, ve kterém se ke každé botě, tašce i klíči chováme, jako by byly naše vlastní. Věříme, že kvalitní věci si zaslouží druhou šanci – proto opravujeme poctivě, s citem pro detail a z materiálů, za které se nemusíme stydět.\n\nZa ta léta nám prošly rukama tisíce párů bot, nespočet kufrů a kabelek a vyrobili jsme klíče snad ke všem zámkům, které si dovedete představit. Zákazníci se k nám vracejí, protože vědí, že u nás dostanou práci odvedenou pořádně, rychle a bez zbytečných řečí.\n\nPřijďte se přesvědčit sami – rádi vám poradíme, jestli se oprava vyplatí, a vždy vám předem řekneme, kolik bude stát.",
+  "image": "assets/about.svg",
+  "stats": [
+    { "num": "30+", "label": "let řemesla" },
+    { "num": "50 000+", "label": "provedených oprav" },
+    { "num": "2", "label": "generace mistrů" }
+  ]
+}

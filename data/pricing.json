@@ -1,0 +1,53 @@
+{
+  "eyebrow": "Ceník",
+  "title": "Kolik to bude stát?",
+  "note": "Uvedené ceny jsou orientační – přesnou cenu vám rádi sdělíme na místě podle rozsahu opravy. Cenu vždy odsouhlasíte předem.",
+  "categories": [
+    {
+      "name": "Oprava obuvi",
+      "icon": "👞",
+      "items": [
+        { "name": "Výměna patníků (dámské)", "price": "od 150 Kč" },
+        { "name": "Výměna patníků (pánské)", "price": "od 200 Kč" },
+        { "name": "Podlepení podrážky", "price": "od 250 Kč" },
+        { "name": "Výměna podrážky", "price": "od 550 Kč" },
+        { "name": "Výměna zipu v obuvi", "price": "od 350 Kč" },
+        { "name": "Šití svršku (za šev)", "price": "od 120 Kč" },
+        { "name": "Roztažení obuvi", "price": "od 200 Kč" }
+      ]
+    },
+    {
+      "name": "Výroba klíčů",
+      "icon": "🔑",
+      "items": [
+        { "name": "Klíč cylindrický", "price": "od 120 Kč" },
+        { "name": "Klíč dozický", "price": "od 150 Kč" },
+        { "name": "Klíč bezpečnostní", "price": "od 250 Kč" },
+        { "name": "Klíč ke schránce", "price": "od 100 Kč" },
+        { "name": "Vložka zámku vč. klíčů", "price": "od 350 Kč" }
+      ]
+    },
+    {
+      "name": "Tašky a kufry",
+      "icon": "🧳",
+      "items": [
+        { "name": "Výměna jezdce zipu", "price": "od 100 Kč" },
+        { "name": "Výměna zipu (dle délky)", "price": "od 300 Kč" },
+        { "name": "Výměna kolečka u kufru", "price": "od 300 Kč" },
+        { "name": "Oprava madla / popruhu", "price": "od 200 Kč" },
+        { "name": "Prošití švů", "price": "od 150 Kč" }
+      ]
+    },
+    {
+      "name": "Kožená galanterie",
+      "icon": "👜",
+      "items": [
+        { "name": "Zkrácení opasku", "price": "od 100 Kč" },
+        { "name": "Dírka do opasku", "price": "od 20 Kč" },
+        { "name": "Výměna zipu u kabelky", "price": "od 350 Kč" },
+        { "name": "Výměna podšívky", "price": "od 450 Kč" },
+        { "name": "Drobné opravy kůže", "price": "dle rozsahu" }
+      ]
+    }
+  ]
+}

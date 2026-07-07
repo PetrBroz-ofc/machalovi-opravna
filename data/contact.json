@@ -1,0 +1,16 @@
+{
+  "eyebrow": "Kontakt",
+  "title": "Zastavte se u nás v dílně",
+  "businessName": "Opravna obuvi a výroba klíčů Machalovi",
+  "shortName": "Machalovi",
+  "address": "Masarykova 123, 250 01 Vaše město",
+  "phone": "+420 777 123 456",
+  "email": "info@opravnamachalovi.cz",
+  "note": "Přijímáme platby kartou i hotově.",
+  "hours": [
+    { "days": "Pondělí – Pátek", "time": "8:00 – 17:00" },
+    { "days": "Sobota", "time": "9:00 – 12:00" },
+    { "days": "Neděle", "time": "Zavřeno" }
+  ],
+  "map": ""
+}

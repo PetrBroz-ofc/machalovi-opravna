@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin – Opravna Machalovi</title>
+<link rel="icon" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<!-- ═══ LOGIN ═══ -->
+<div id="login-screen">
+  <div class="login-box">
+    <img src="assets/favicon.svg" alt="Machalovi" onerror="this.style.display='none'">
+    <h2>Opravna Machalovi</h2>
+    <p>Správa webu — přihlašte se</p>
+    <div class="field"><label>Uživatelské jméno</label><input type="text" id="login-user" placeholder="admin" autocomplete="username"></div>
+    <div class="field"><label>Heslo</label><input type="password" id="login-pass" placeholder="••••••••" autocomplete="current-password"></div>
+    <button class="btn btn-primary" id="login-btn" style="width:100%;justify-content:center;margin-top:0.5rem">Přihlásit se</button>
+    <p id="login-error" style="color:var(--red);font-size:0.8rem;margin-top:0.75rem;display:none">❌ Špatné přihlašovací údaje</p>
+  </div>
+</div>
+
+<!-- ═══ ADMIN ═══ -->
+<div id="admin-screen">
+  <div class="admin-header">
+    <h2><img src="assets/favicon.svg" alt="" onerror="this.style.display='none'"> Opravna Machalovi — Admin</h2>
+    <button class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,0.3)" onclick="logout()">Odhlásit</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('hero',this)">🏠 Hero</button>
+    <button class="tab" onclick="showTab('about',this)">📝 O nás</button>
+    <button class="tab" onclick="showTab('services',this)">🛠️ Služby</button>
+    <button class="tab" onclick="showTab('why',this)">⭐ Proč my</button>
+    <button class="tab" onclick="showTab('pricing',this)">💰 Ceník</button>
+    <button class="tab" onclick="showTab('gallery',this)">📸 Galerie</button>
+    <button class="tab" onclick="showTab('faq',this)">❓ FAQ</button>
+    <button class="tab" onclick="showTab('reviews',this)">💬 Recenze</button>
+    <button class="tab" onclick="showTab('contact',this)">📍 Kontakt</button>
+    <button class="tab" onclick="showTab('footer',this)">🔻 Patička</button>
+    <button class="tab" onclick="showTab('seo',this)">🔍 SEO</button>
+    <button class="tab" onclick="showTab('settings',this)">⚙️ Nastavení</button>
+  </div>
+
+  <!-- ── HERO ── -->
+  <div class="panel active" id="panel-hero">
+    <div class="card">
+      <h3 class="card-title">Hlavní sekce (Hero)</h3>
+      <div class="field"><label>Štítek nad nadpisem</label><input type="text" id="h-eyebrow"></div>
+      <div class="field"><label>Hlavní nadpis</label><input type="text" id="h-title"></div>
+      <div class="field"><label>Podtitul (název firmy)</label><input type="text" id="h-subtitle"></div>
+      <div class="field"><label>Popisný text</label><textarea id="h-desc" rows="3"></textarea></div>
+      <div class="field-grid">
+        <div class="field"><label>Tlačítko 1 — text</label><input type="text" id="h-btn1-text"></div>
+        <div class="field"><label>Tlačítko 1 — odkaz</label><input type="text" id="h-btn1-link" placeholder="#sluzby"></div>
+      </div>
+      <div class="field-grid">
+        <div class="field"><label>Tlačítko 2 — text</label><input type="text" id="h-btn2-text"></div>
+        <div class="field"><label>Tlačítko 2 — odkaz</label><input type="text" id="h-btn2-link" placeholder="#cenik"></div>
+      </div>
+
+      <div class="sub-row-head"><label>Odznaky (badge)</label><button class="btn btn-outline" onclick="addBadgeRow()">+ Přidat odznak</button></div>
+      <div id="h-badges"></div>
+
+      <div class="field" style="margin-top:1.2rem"><label>Obrázek na pozadí (nepovinné)</label>
+        <div class="upload-area" onclick="document.getElementById('up-hero-bg').click()">
+          <span class="upload-icon">🖼️</span>Klikněte pro výběr obrázku pozadí
+          <input type="file" id="up-hero-bg" accept="image/*" onchange="uploadImage(this,'hero-bg')">
+        </div>
+        <div class="upload-preview-wrap">
+          <img id="prev-hero-bg" class="upload-preview">
+          <button class="btn btn-outline" id="clear-hero-bg" style="display:none" onclick="clearImage('hero-bg')">✕ Odebrat</button>
+        </div>
+        <input type="hidden" id="val-hero-bg">
+      </div>
+
+      <div class="field"><label>Hlavní obrázek (vpravo)</label>
+        <div class="upload-area" onclick="document.getElementById('up-hero-img').click()">
+          <span class="upload-icon">📷</span>Klikněte pro výběr hlavního obrázku
+          <input type="file" id="up-hero-img" accept="image/*" onchange="uploadImage(this,'hero-img')">
+        </div>
+        <div class="upload-preview-wrap">
+          <img id="prev-hero-img" class="upload-preview">
+          <button class="btn btn-outline" id="clear-hero-img" style="display:none" onclick="clearImage('hero-img')">✕ Odebrat</button>
+        </div>
+        <input type="hidden" id="val-hero-img">
+      </div>
+
+      <button class="btn btn-success" id="save-hero" onclick="saveHero()">💾 Uložit Hero</button>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ── -->
+  <div class="panel" id="panel-about">
+    <div class="card">
+      <h3 class="card-title">Sekce „O nás"</h3>
+      <div class="field"><label>Štítek</label><input type="text" id="a-eyebrow"></div>
+      <div class="field"><label>Nadpis</label><input type="text" id="a-title"></div>
+      <div class="field"><label>Text (odstavce oddělte prázdným řádkem)</label><textarea id="a-text" rows="9"></textarea></div>
+
+      <div class="field"><label>Obrázek</label>
+        <div class="upload-area" onclick="document.getElementById('up-about-img').click()">
+          <span class="upload-icon">📷</span>Klikněte pro výběr obrázku
+          <input type="file" id="up-about-img" accept="image/*" onchange="uploadImage(this,'about-img')">
+        </div>
+        <div class="upload-preview-wrap">
+          <img id="prev-about-img" class="upload-preview">
+          <button class="btn btn-outline" id="clear-about-img" style="display:none" onclick="clearImage('about-img')">✕ Odebrat</button>
+        </div>
+        <input type="hidden" id="val-about-img">
+      </div>
+
+      <div class="sub-row-head"><label>Statistiky</label><button class="btn btn-outline" onclick="addStatRow()">+ Přidat statistiku</button></div>
+      <div id="a-stats"></div>
+
+      <button class="btn btn-success" style="margin-top:1rem" onclick="saveAbout()">💾 Uložit O nás</button>
+    </div>
+  </div>
+
+  <!-- ── SERVICES ── -->
+  <div class="panel" id="panel-services">
+    <div class="card">
+      <div class="card-header"><h3>Služby</h3><button class="btn btn-primary" onclick="openModal('service')">+ Přidat službu</button></div>
+      <div id="list-services"><div class="loading-state">Načítám...</div></div>
+    </div>
+  </div>
+
+  <!-- ── WHY ── -->
+  <div class="panel" id="panel-why">
+    <div class="card">
+      <h3 class="card-title">Sekce „Proč právě k nám"</h3>
+      <div class="field"><label>Štítek</label><input type="text" id="w-eyebrow"></div>
+      <div class="field"><label>Nadpis</label><input type="text" id="w-title"></div>
+      <div class="field"><label>Podtitul</label><textarea id="w-sub" rows="2"></textarea></div>
+      <div class="sub-row-head"><label>Důvody</label><button class="btn btn-outline" onclick="addWhyRow()">+ Přidat důvod</button></div>
+      <div id="w-items"></div>
+      <button class="btn btn-success" style="margin-top:1rem" onclick="saveWhy()">💾 Uložit Proč my</button>
+    </div>
+  </div>
+
+  <!-- ── PRICING ── -->
+  <div class="panel" id="panel-pricing">
+    <div class="card">
+      <h3 class="card-title">Nadpis sekce a poznámka</h3>
+      <div class="field-grid">
+        <div class="field"><label>Štítek</label><input type="text" id="p-eyebrow"></div>
+        <div class="field"><label>Nadpis</label><input type="text" id="p-title"></div>
+      </div>
+      <div class="field"><label>Poznámka pod ceníkem</label><textarea id="p-note" rows="2"></textarea></div>
+      <button class="btn btn-success" onclick="savePricingHeader()">💾 Uložit nadpis</button>
+    </div>
+    <div class="card">
+      <div class="card-header"><h3>Kategorie ceníku</h3><button class="btn btn-primary" onclick="openModal('pricecat')">+ Přidat kategorii</button></div>
+      <div id="list-pricecats"><div class="loading-state">Načítám...</div></div>
+    </div>
+  </div>
+
+  <!-- ── GALLERY ── -->
+  <div class="panel" id="panel-gallery">
+    <div class="card">
+      <h3 class="card-title">Nadpis sekce</h3>
+      <div class="field-grid">
+        <div class="field"><label>Štítek</label><input type="text" id="g-eyebrow"></div>
+        <div class="field"><label>Nadpis</label><input type="text" id="g-title"></div>
+      </div>
+      <button class="btn btn-success" onclick="saveGallery(true)">💾 Uložit nadpis</button>
+    </div>
+    <div class="card">
+      <div class="card-header"><h3>Fotografie</h3></div>
+      <div class="upload-area" onclick="document.getElementById('gal-upload').click()">
+        <span class="upload-icon">📷</span>Klikněte nebo vyberte více fotek naráz
+        <input type="file" id="gal-upload" accept="image/*" multiple onchange="handleGalleryUpload(this)">
+      </div>
+      <div class="upload-progress" id="gal-progress">
+        <span id="gal-progress-text">Nahrávám...</span>
+        <div class="progress-bar"><div class="progress-fill" id="gal-progress-fill" style="width:0%"></div></div>
+      </div>
+      <div class="gallery-admin-grid" id="gallery-admin-grid"></div>
+      <button class="btn btn-success" style="margin-top:1rem" onclick="saveGallery()">💾 Uložit galerii (pořadí a popisky)</button>
+    </div>
+  </div>
+
+  <!-- ── FAQ ── -->
+  <div class="panel" id="panel-faq">
+    <div class="card">
+      <h3 class="card-title">Nadpis sekce</h3>
+      <div class="field-grid">
+        <div class="field"><label>Štítek</label><input type="text" id="f-eyebrow"></div>
+        <div class="field"><label>Nadpis</label><input type="text" id="f-title"></div>
+      </div>
+      <button class="btn btn-success" onclick="saveFaqHeader()">💾 Uložit nadpis</button>
+    </div>
+    <div class="card">
+      <div class="card-header"><h3>Otázky a odpovědi</h3><button class="btn btn-primary" onclick="openModal('faq')">+ Přidat otázku</button></div>
+      <div id="list-faq"><div class="loading-state">Načítám...</div></div>
+    </div>
+  </div>
+
+  <!-- ── REVIEWS ── -->
+  <div class="panel" id="panel-reviews">
+    <div class="card">
+      <h3 class="card-title">Nadpis sekce</h3>
+      <div class="field-grid">
+        <div class="field"><label>Štítek</label><input type="text" id="r-eyebrow"></div>
+        <div class="field"><label>Nadpis</label><input type="text" id="r-title"></div>
+      </div>
+      <button class="btn btn-success" onclick="saveReviewsHeader()">💾 Uložit nadpis</button>
+    </div>
+    <div class="card">
+      <div class="card-header"><h3>Recenze zákazníků</h3><button class="btn btn-primary" onclick="openModal('review')">+ Přidat recenzi</button></div>
+      <div id="list-reviews"><div class="loading-state">Načítám...</div></div>
+    </div>
+  </div>
+
+  <!-- ── CONTACT ── -->
+  <div class="panel" id="panel-contact">
+    <div class="card">
+      <h3 class="card-title">Kontaktní údaje</h3>
+      <div class="field-grid">
+        <div class="field"><label>Štítek</label><input type="text" id="c-eyebrow"></div>
+        <div class="field"><label>Nadpis</label><input type="text" id="c-title"></div>
+      </div>
+      <div class="field"><label>Název firmy (celý)</label><input type="text" id="c-businessName"></div>
+      <div class="field"><label>Krátký název (v hlavičce webu)</label><input type="text" id="c-shortName"></div>
+      <div class="field"><label>Adresa</label><input type="text" id="c-address"></div>
+      <div class="field-grid">
+        <div class="field"><label>Telefon</label><input type="text" id="c-phone" placeholder="+420 777 123 456"></div>
+        <div class="field"><label>E-mail</label><input type="email" id="c-email"></div>
+      </div>
+      <div class="field"><label>Poznámka (např. platba kartou)</label><input type="text" id="c-note"></div>
+
+      <div class="sub-row-head"><label>Otevírací doba</label><button class="btn btn-outline" onclick="addHoursRow()">+ Přidat řádek</button></div>
+      <div id="c-hours"></div>
+
+      <div class="field" style="margin-top:1.2rem"><label>Google Maps</label>
+        <textarea id="c-map" rows="3" placeholder='Vložte celý &lt;iframe&gt; kód z Google Maps (Sdílet → Vložit mapu), nebo jen URL adresu z atributu src.'></textarea>
+        <p class="field-hint">Na Google Maps klikněte na „Sdílet" → „Vložit mapu" a zkopírujte kód sem.</p>
+      </div>
+
+      <button class="btn btn-success" onclick="saveContact()">💾 Uložit kontakt</button>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <div class="panel" id="panel-footer">
+    <div class="card">
+      <h3 class="card-title">Patička</h3>
+      <div class="field"><label>Text o firmě</label><textarea id="ft-text" rows="3"></textarea></div>
+      <div class="field"><label>Copyright</label><input type="text" id="ft-copyright" placeholder="© 2026 Opravna obuvi a výroba klíčů Machalovi"></div>
+      <div class="field-grid">
+        <div class="field"><label>Autor webu — text</label><input type="text" id="ft-credit-text"></div>
+        <div class="field"><label>Autor webu — odkaz</label><input type="text" id="ft-credit-link"></div>
+      </div>
+      <div class="sub-row-head"><label>Sociální sítě</label><button class="btn btn-outline" onclick="addSocialRow()">+ Přidat síť</button></div>
+      <div id="ft-socials"></div>
+      <p class="field-hint" style="margin-bottom:1rem">Sítě bez vyplněné URL adresy se na webu nezobrazí.</p>
+      <button class="btn btn-success" onclick="saveFooter()">💾 Uložit patičku</button>
+    </div>
+  </div>
+
+  <!-- ── SEO ── -->
+  <div class="panel" id="panel-seo">
+    <div class="card">
+      <h3 class="card-title">SEO a metadata</h3>
+      <div class="field"><label>Titulek stránky (title)</label><input type="text" id="s-title"></div>
+      <div class="field"><label>Meta popis (description)</label><textarea id="s-desc" rows="3"></textarea></div>
+
+      <div class="field"><label>Favicona</label>
+        <div class="upload-area" onclick="document.getElementById('up-seo-fav').click()">
+          <span class="upload-icon">🔖</span>Klikněte pro výběr favicony (SVG / PNG)
+          <input type="file" id="up-seo-fav" accept="image/*" onchange="uploadImage(this,'seo-fav')">
+        </div>
+        <div class="upload-preview-wrap">
+          <img id="prev-seo-fav" class="upload-preview" style="max-width:64px;max-height:64px">
+          <button class="btn btn-outline" id="clear-seo-fav" style="display:none" onclick="clearImage('seo-fav')">✕ Odebrat</button>
+        </div>
+        <input type="hidden" id="val-seo-fav">
+      </div>
+
+      <div class="field"><label>Open Graph obrázek (náhled při sdílení)</label>
+        <div class="upload-area" onclick="document.getElementById('up-seo-og').click()">
+          <span class="upload-icon">🖼️</span>Klikněte pro výběr OG obrázku (ideálně 1200×630 px)
+          <input type="file" id="up-seo-og" accept="image/*" onchange="uploadImage(this,'seo-og')">
+        </div>
+        <div class="upload-preview-wrap">
+          <img id="prev-seo-og" class="upload-preview">
+          <button class="btn btn-outline" id="clear-seo-og" style="display:none" onclick="clearImage('seo-og')">✕ Odebrat</button>
+        </div>
+        <input type="hidden" id="val-seo-og">
+      </div>
+
+      <button class="btn btn-success" onclick="saveSeo()">💾 Uložit SEO</button>
+    </div>
+  </div>
+
+  <!-- ── SETTINGS ── -->
+  <div class="panel" id="panel-settings">
+    <div class="card">
+      <h3 class="card-title">Změna přihlašovacích údajů</h3>
+      <div class="field"><label>Nové uživatelské jméno</label><input type="text" id="new-user" placeholder="admin"></div>
+      <div class="field"><label>Nové heslo</label><input type="password" id="new-pass" placeholder="••••••••"></div>
+      <div class="field"><label>Potvrdit nové heslo</label><input type="password" id="new-pass2" placeholder="••••••••"></div>
+      <button class="btn btn-success" onclick="changeCredentials()">Uložit změny</button>
+      <p id="settings-msg" style="font-size:0.82rem;margin-top:0.75rem;display:none"></p>
+    </div>
+    <div class="card">
+      <h3 class="card-title">GitHub repozitář</h3>
+      <div class="field-grid">
+        <div class="field"><label>Vlastník (owner)</label><input type="text" id="gh-owner"></div>
+        <div class="field"><label>Repozitář (repo)</label><input type="text" id="gh-repo"></div>
+      </div>
+      <p class="field-hint" style="margin-bottom:1rem">Token je uložen pouze ve Vercel Environment Variables (GH_TOKEN). Web s GitHubem nikdy nekomunikuje přímo — vše jde přes /api/save.</p>
+      <button class="btn btn-success" onclick="saveGhConfig()">Uložit nastavení</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MODAL ═══ -->
+<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 id="modal-title">Formulář</h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal()">Zrušit</button>
+      <button class="btn btn-success" id="modal-save-btn" onclick="saveModal()">💾 Uložit</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

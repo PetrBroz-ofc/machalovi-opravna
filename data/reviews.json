@@ -1,0 +1,21 @@
+{
+  "eyebrow": "Recenze",
+  "title": "Co o nás říkají zákazníci",
+  "items": [
+    {
+      "name": "Jana K.",
+      "text": "Zachránili mi oblíbené kozačky, které už dvě jiné opravny odmítly. Práce perfektní, cena férová a jednání milé. Doporučuji všem!",
+      "rating": 5
+    },
+    {
+      "name": "Petr S.",
+      "text": "Klíče na počkání, fungovaly napoprvé. Pán mi navíc poradil s výběrem bezpečnostní vložky. Poctivá rodinná firma, jak má být.",
+      "rating": 5
+    },
+    {
+      "name": "Marie V.",
+      "text": "Nechala jsem si opravit zip na cestovním kufru den před dovolenou. Stihli to do druhého dne a kufr drží dodnes. Moc děkuji!",
+      "rating": 5
+    }
+  ]
+}

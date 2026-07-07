@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opravna obuvi a výroba klíčů</title>
+<meta name="description" content="">
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<link rel="icon" id="favicon" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="#uvod" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(32 32) rotate(-45)">
+            <circle cx="0" cy="-12" r="9" fill="none" stroke="#c9973f" stroke-width="5"/>
+            <rect x="-2.5" y="-4" width="5" height="24" rx="2" fill="#c9973f"/>
+            <rect x="-2.5" y="10" width="9" height="4.5" rx="1.5" fill="#c9973f"/>
+            <rect x="-2.5" y="16.5" width="7" height="4.5" rx="1.5" fill="#c9973f"/>
+          </g>
+        </svg>
+      </span>
+      <span class="brand-name" id="brand-name"><small id="brand-small"></small><span id="brand-title"></span></span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#o-nas">O nás</a>
+      <a href="#sluzby">Služby</a>
+      <a href="#cenik">Ceník</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#recenze">Recenze</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <a href="#" class="header-cta" id="header-phone">📞 <span></span></a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="uvod">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <span class="eyebrow" id="hero-eyebrow"></span>
+        <h1 id="hero-title"></h1>
+        <p class="hero-desc" id="hero-desc"></p>
+        <div class="hero-actions" id="hero-actions"></div>
+        <div class="hero-badges" id="hero-badges"></div>
+      </div>
+      <div class="hero-visual reveal" id="hero-visual"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="about" id="o-nas">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal" id="about-visual"></div>
+      <div class="reveal">
+        <span class="eyebrow" id="about-eyebrow"></span>
+        <h2 class="section-title" id="about-title"></h2>
+        <p class="about-text" id="about-text"></p>
+        <div class="about-stats" id="about-stats"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section class="services" id="sluzby">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Naše služby</span>
+      <h2 class="section-title">S čím vám pomůžeme</h2>
+    </div>
+    <div class="services-grid" id="services-grid"></div>
+    <div class="service-details" id="service-details"></div>
+  </div>
+</section>
+
+<!-- ═══ WHY US ═══ -->
+<section class="why" id="proc-my">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" id="why-eyebrow"></span>
+      <h2 class="section-title" id="why-title"></h2>
+      <p class="section-sub" id="why-sub"></p>
+    </div>
+    <div class="why-grid" id="why-grid"></div>
+  </div>
+</section>
+
+<!-- ═══ PRICING ═══ -->
+<section class="pricing" id="cenik">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" id="pricing-eyebrow"></span>
+      <h2 class="section-title" id="pricing-title"></h2>
+    </div>
+    <div class="price-tabs reveal" id="price-tabs"></div>
+    <div class="price-card reveal" id="price-card"></div>
+    <p class="price-note" id="price-note"></p>
+  </div>
+</section>
+
+<!-- ═══ GALLERY ═══ -->
+<section class="gallery" id="galerie">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" id="gallery-eyebrow"></span>
+      <h2 class="section-title" id="gallery-title"></h2>
+    </div>
+    <div id="gallery-content"></div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" id="faq-eyebrow"></span>
+      <h2 class="section-title" id="faq-title"></h2>
+    </div>
+    <div class="faq-list" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- ═══ REVIEWS ═══ -->
+<section class="reviews" id="recenze">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" id="reviews-eyebrow"></span>
+      <h2 class="section-title" id="reviews-title"></h2>
+    </div>
+    <div class="reviews-grid" id="reviews-grid"></div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section class="contact" id="kontakt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" id="contact-eyebrow"></span>
+      <h2 class="section-title" id="contact-title"></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-cards reveal" id="contact-cards"></div>
+      <div class="contact-map reveal" id="contact-map"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name" id="footer-brand-name"></span>
+        <p id="footer-text"></p>
+        <div class="footer-socials" id="footer-socials"></div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigace</h4>
+        <ul>
+          <li><a href="#o-nas">O nás</a></li>
+          <li><a href="#sluzby">Služby</a></li>
+          <li><a href="#cenik">Ceník</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#faq">Časté dotazy</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul id="footer-contact"></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span id="footer-copyright"></span>
+      <span id="footer-credit"></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ LIGHTBOX ═══ -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <button class="lb-prev" onclick="stepLightbox(-1)">←</button>
+  <button class="lb-next" onclick="stepLightbox(1)">→</button>
+  <img id="lightbox-img" src="" alt="">
+  <div class="lb-label" id="lightbox-label"></div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
